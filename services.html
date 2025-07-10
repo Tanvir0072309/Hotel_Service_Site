@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+     <link rel="stylesheet" href="ourservices.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+     <nav class="navbar" id="navbar" >
+    <div class="logo-box">Room</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="register-btn" id="registerBtn">
+      <button>Emergency</button>
+    </div>
+    <div class="menu-icon" onclick="openMenu()">
+  &#9776;
+</div>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Trust & Certificates</a></li>
+    </ul>
+  </div>
+</div>
+  </nav>
+
+ <!-- Navbar Space -->
+  <div class="navbar-space"></div>
+
+  <!-- Headings -->
+  <div class="content-wrapper">
+    <div class="small-title">Services Clean Around Your Space</div>
+    <div class="big-title" id="typing-text"></div>
+
+    <!-- 2x2 Service Boxes -->
+    <div class="services-grid">
+      <div class="service-box">
+        <h4>01<br>Home</h4>
+        <p>Thoughtful cleaning<br>for your most personal space.</p>
+      </div>
+      <div class="service-box">
+        <h4>02<br>Workspace</h4>
+        <p>Thoughtful cleaning<br>for your most personal space.</p>
+      </div>
+      <div class="service-box">
+        <h4>03<br>Store</h4>
+        <p>Thoughtful cleaning<br>for your most personal space.</p>
+      </div>
+      <div class="service-box">
+        <h4>04<br>Move - In/Out</h4>
+        <p>Thoughtful cleaning<br>for your most personal space.</p>
+      </div>
+    </div>
+
+    <!-- Image + Right Text Section -->
+    <div class="image-text-section">
+      <div class="image-column">
+        <img src="search/services 1.jpg" alt="img1">
+        <img src="search/services 2.jpg" alt="img2">
+        <img src="search/services 3.jpg" alt="img3">
+      </div>
+      <div class="text-column">
+        <p>Our services bring freshness, hygiene, and peace of mind to every corner of your world.</p>
+
+        <!-- Pricing Box -->
+        <div class="pricing-box">
+          <span class="link-text">View Our Pricing</span>
+          <button class="arrow-button">↗️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+const text = "Clear look at what we can clean for you";
+const typingElement = document.getElementById("typing-text");
+let index = 0;
+
+function typeText() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeText, 60);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  typeText();
+});
+
+  </script>
+
+
+<section class="services-section">
+  <div class="services-header">
+    <h3>What We Provide</h3>
+    <div class="underline"></div>
+    <h2>Explore the IT Services We Provide</h2>
+    <p>We provide robust IT solutions tailored to hotel needs. From secure data systems to smooth online booking management, our services elevate your hospitality business.</p>
+  </div>
+
+  <!-- Top Image Row -->
+  <div class="image-row top-images">
+    <div class="img-card small-img">
+      <img src="search/it4.png" alt="Service 1">
+      <div class="img-overlay">
+        <div class="top-left">
+          <p>Cloud Hotel Sync</p>
+          <p>Secure Cloud Access</p>
+        </div>
+        <div class="bottom-left">
+          <p>24/7 hotel booking access</p>
+          <p>Multi-platform integration</p>
+          <p>Security-enhanced data</p>
+          <div class="human-line">
+            <span>👤 IT Sync</span>
+          </div>
+        </div>
+        <button class="arrow-btn">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="img-card big-img">
+      <img src="search/it3.png" alt="Service 2">
+      <div class="img-overlay">
+        <div class="top-left">
+          <p>Smart Room Systems</p>
+          <p>IoT-based Controls</p>
+        </div>
+        <div class="bottom-left">
+          <p>Central room monitoring</p>
+          <p>Energy-efficient control</p>
+          <p>Customer satisfaction tools</p>
+          <div class="human-line">
+            <span>👤 Smart Service</span>
+          </div>
+        </div>
+        <button class="arrow-btn">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Image Row -->
+  <div class="image-row bottom-images">
+    <div class="img-card big-img">
+      <img src="search/it2.png" alt="Service 3">
+      <div class="img-overlay">
+        <div class="top-left">
+          <p>Guest Data Mgmt</p>
+          <p>Encrypted & Fast</p>
+        </div>
+        <div class="bottom-left">
+          <p>GDPR compliant storage</p>
+          <p>Quick guest lookup</p>
+          <p>Seamless integration</p>
+          <div class="human-line">
+            <span>👤 Data Manager</span>
+          </div>
+        </div>
+        <button class="arrow-btn">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="img-card small-img">
+      <img src="search/it5.png" alt="Service 4">
+      <div class="img-overlay">
+        <div class="top-left">
+          <p>Auto Billing</p>
+          <p>With Smart Logs</p>
+        </div>
+        <div class="bottom-left">
+          <p>Contactless checkout</p>
+          <p>Real-time billing</p>
+          <p>Fraud detection system</p>
+          <div class="human-line">
+            <span>👤 Billing Bot</span>
+          </div>
+        </div>
+        <button class="arrow-btn">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="ai-wrapper">
+
+    <!-- ✅ Background Image Box -->
+    <div class="ai-image-box">
+
+      <!-- 🟢 Overlay Text Directly on Image -->
+      <div class="ai-overlay-text">
+        <h1>AI</h1>
+        <h2>that works</h2>
+        <h2>around you</h2>
+        <p>Our expert teams handle the core so you can focus on what matters.</p>
+        <ul>
+          <li>Web Development</li>
+          <li>App Development</li>
+          <li>Graphic Design</li>
+          <li>IT & UX</li>
+        </ul>
+      </div>
+
+      <!-- 🟢 Blurred Box at Bottom -->
+      <div class="ai-blur-box">
+        <h3>Got a space in<br>need of a refresh?</h3>
+        <button class="cta-btn">
+        <a href="tel:+919327673402" class="call-btn">Schedule a Call <span class="icon">➤</span></a>
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="booking-section">
+  <div class="booking-box">
+    <h2>Ready to Book Your Place</h2>
+    <p>Let us help you plan your perfect experience.<br>
+       Our experts are ready to assist you every step of the way.</p>
+    <button class="talk-btn">Let’s Talk</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<footer class="footer">
+  <div class="footer-top">
+    
+    <!-- Left Section -->
+    <div class="footer-col company-info">
+      <div class="logo-box">
+        <img src="jinarth.png" alt="Company Logo">
+        <div class="company-text">
+          <h3>Jinarth Infotech</h3>
+          <p class="tagline">Empowering Digital Solutions</p>
+        </div>
+      </div>
+      <p class="intro">
+        Jinarth Infotech is a modern tech company delivering smart digital experiences. <br>
+        We specialize in innovative software solutions tailored for your success.
+      </p>
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-col quick-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#trust">Trust & Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-col contact-info">
+      <h4>Contact Us</h4>
+      <p>Anand, Gujarat 388001</p>
+      <p>+91 12345 67890</p>
+      <p>info@jinarthinfotech.com</p>
+      <p><a href="http://www.jinarthinfotech.com" target="_blank">www.jinarthinfotech.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Info Row -->
+  <div class="footer-bottom">
+    <p class="left">@2025 Jinarth Infotech. All rights reserved.</p>
+    <p class="center">Developed by Jinarth Infotech</p>
+    <p class="right">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Site Map</a>
+    </p>
+  </div>
+
+  <!-- Final Big Brand Text -->
+  <div class="footer-brand">
+    <h1>JINARTH</h1>
+  </div>
+</footer>
+
+</body>
+</html>

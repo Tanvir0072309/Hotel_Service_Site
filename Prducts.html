@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+     <link rel="stylesheet" href="productsli.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+     <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" >
+    <div class="logo-box">Room</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="register-btn" id="registerBtn">
+      <button>Emergency</button>
+    </div>
+    <div class="menu-icon" onclick="openMenu()">
+  &#9776;
+</div>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Trust & Certificates</a></li>
+    </ul>
+  </div>
+</div>
+  </nav>
+
+<section class="room-section">
+    <div class="left-room">
+      <small>Selected room services for you</small>
+      <h1><span>Choose</span> India’s Best Room Service</h1>
+      <p>your Suitable one</p>
+      <button>Explore Rooms</button>
+    </div>
+
+    <div class="right-room">
+      <div class="image-wrapper">
+        <img src="luxury-bedroom-hotel.jpg" alt="Main Room" class="main-img" />
+        <img src="—Pngtree—white curtain pair straight and_19597015.png" alt="Overlay" class="top-img show-on-load" />
+      </div>
+    </div>
+  </section>
+
+
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+    }
+    .places-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .places-row button {
+      flex: 1 1 calc(10% - 12px);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .places-row button:hover {
+      background: #0056b3;
+    }
+    .filters {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+    .filters label {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filters select, .filters input[type="checkbox"] {
+      padding: 5px;
+      border-radius: 6px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+    .card {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card h4 {
+      margin: 8px 0 4px;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.85rem;
+      margin: 2px 0;
+    }
+      #detailsPanel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1999;
+    overflow-y: auto;
+    transition: right 0.4s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #detailsPanel.active {
+    right: 0;
+  }
+
+  #detailsPanel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  #detailsPanel h2 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  #detailsPanel p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .reviews {
+    margin-top: 20px;
+  }
+
+  .review-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .review-item strong {
+    color: #222;
+  }
+
+  .book-btn {
+    display: block;
+    width: 100%;
+      flex: 1 1 calc(10% - 12px);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+  }
+
+  .book-btn:hover {
+    background-color: #218838;
+  }  </style>
+</head>
+<body>
+  <div class="places-row">
+    <button>Goa</button>
+    <button>Jaipur</button>
+    <button>Manali</button>
+    <button>Udaipur</button>
+    <button>Shimla</button>
+    <button>Mumbai</button>
+    <button>Lonavala</button>
+    <button>Mysore</button>
+    <button>Kodaikanal</button>
+    <button>Ooty</button>
+  </div>
+
+  <div class="filters">
+    <label><input type="checkbox" name="price" value="under500" /> Under ₹500</label>
+    <label><input type="checkbox" name="price" value="over500" /> More than ₹500</label>
+    <label>Rating: 
+      <select name="rating">
+        <option>All</option>
+        <option>1 Star</option>
+        <option>2 Star</option>
+        <option>3 Star</option>
+        <option>4 Star</option>
+        <option>5 Star</option>
+      </select>
+    </label>
+    <label>Guests:
+      <select name="guests">
+        <option>1 Person</option>
+        <option>2 Persons</option>
+        <option>Family</option>
+      </select>
+    </label>
+    <label>Room Type:
+      <select>
+        <option>Standard</option>
+        <option>Deluxe</option>
+        <option>Suite</option>
+      </select>
+    </label>
+    <label>Facilities:
+      <select>
+        <option>WiFi</option>
+        <option>Pool</option>
+        <option>Parking</option>
+      </select>
+    </label>
+    <label>Location:
+      <select>
+        <option>Near Beach</option>
+        <option>Hill View</option>
+        <option>Market Area</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="cards" id="cardContainer"></div>
+
+<div id="detailsPanel">
+  <img id="detailImg" src="" alt="Hotel Image">
+  <h2 id="detailTitle">Hotel Name</h2>
+  <p><strong>Address:</strong> <span id="detailAddress"></span></p>
+  <p><strong>Email:</strong> <span id="detailEmail"></span></p>
+  <p><strong>Price:</strong> <span id="detailPrice"></span></p>
+  <p><strong>Rating:</strong> 4.5 / 5</p>
+  <p><strong>Facilities:</strong> Free Wi-Fi, Breakfast Included, Parking, AC Rooms, Pool</p>
+
+  <div class="reviews">
+    <h3>Customer Reviews (34)</h3>
+    <div class="review-item"><strong>Rohit:</strong> Great location and clean rooms!</div>
+    <div class="review-item"><strong>Neha:</strong> Excellent service, will come again.</div>
+    <div class="review-item"><strong>Arjun:</strong> Value for money and peaceful stay.</div>
+    <div class="review-item"><strong>Shruti:</strong> Loved the food and ambiance.</div>
+    <div class="review-item"><strong>Amit:</strong> Overall, a very comfortable stay.</div>
+  </div>
+
+  <button class="book-btn">Book Your Place</button>
+</div>
+
+
+ <script>
+  const hotels = [
+    {
+      name: "Goa Beach Resort",
+      place: "Goa",
+      address: "Near Baga Beach, Goa",
+      email: "goabeach@resort.com",
+      price: "₹900",
+      image: "search/pic (0).jpeg",
+      rating: "4 Star"
+    },
+        {
+      name: "Goa Beach Resort",
+      place: "Goa",
+      address: "Near Baga Beach, Goa",
+      email: "goabeach@resort.com",
+      price: "₹900",
+      image: "search/pic (1).jpg",
+      rating: "4 Star"
+    },
+    {
+      name: "Goa Budget Stay",
+      place: "Goa",
+      address: "Candolim, Goa",
+      email: "budgetstay@goa.com",
+      price: "₹450",
+      image: "search/pic (2).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Goa Heritage Inn",
+      place: "Goa",
+      address: "Old Goa Road",
+      email: "heritageinn@goa.com",
+      price: "₹500",
+      image: "search/pic (2).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Goa Luxury Villas",
+      place: "Goa",
+      address: "Panaji, Goa",
+      email: "luxuryvillas@goa.com",
+      price: "₹1000",
+      image: "search/pic (3).jpg",
+      rating: "5 Star"
+    },
+    {
+      name: "Goa Sea Breeze",
+      place: "Goa",
+      address: "Vagator Beach",
+      email: "seabreeze@goa.com",
+      price: "₹700",
+      image: "search/pic (3).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Goa Palm View",
+      place: "Goa",
+      address: "Colva Beach",
+      email: "palmview@goa.com",
+      price: "₹600",
+      image: "search/pic (4).jpg",
+      rating: "4 Star"
+    },
+    {
+      name: "Goa Tranquil Retreat",
+      place: "Goa",
+      address: "Arambol",
+      email: "tranquil@goa.com",
+      price: "₹480",
+      image: "search/pic (4).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Goa Comfort Stay",
+      place: "Goa",
+      address: "Mapusa, Goa",
+      email: "comfort@goa.com",
+      price: "₹850",
+      image: "search/pic (5).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Goa Sunrise Resort",
+      place: "Goa",
+      address: "Dona Paula",
+      email: "sunrise@goa.com",
+      price: "₹550",
+      image: "search/pic (5).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Goa Urban Stay",
+      place: "Goa",
+      address: "Porvorim, Goa",
+      email: "urbanstay@goa.com",
+      price: "₹500",
+      image: "search/pic (6).jpg",
+      rating: "1 Star"
+    },
+    {
+      name: "Pink Palace",
+      place: "Jaipur",
+      address: "Amer Road, Jaipur",
+      email: "jaipur@palace.com",
+      price: "₹450",
+      image: "search/pic (6).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Pink Palace",
+      place: "Jaipur",
+      address: "Amer Road, Jaipur",
+      email: "jaipur@palace.com",
+      price: "₹450",
+      image: "search/pic (7).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Jaipur Royal Stay",
+      place: "Jaipur",
+      address: "M.I. Road, Jaipur",
+      email: "royalstay@jaipur.com",
+      price: "₹900",
+      image: "search/pic (7).jpeg",
+      rating: "5 Star"
+    },
+    {
+      name: "Jaipur Budget Inn",
+      place: "Jaipur",
+      address: "Bapu Bazaar, Jaipur",
+      email: "budgetinn@jaipur.com",
+      price: "₹480",
+      image: "search/pic (8).jpg",
+      rating: "2 Star"
+    },
+    {
+      name: "Jaipur Heritage Hotel",
+      place: "Jaipur",
+      address: "Pink City Gate, Jaipur",
+      email: "heritage@jaipur.com",
+      price: "₹500",
+      image: "search/pic (8).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Jaipur Comfort Inn",
+      place: "Jaipur",
+      address: "Ajmer Road, Jaipur",
+      email: "comfort@jaipur.com",
+      price: "₹550",
+      image: "search/pic (9).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Jaipur Garden View",
+      place: "Jaipur",
+      address: "Civil Lines, Jaipur",
+      email: "garden@jaipur.com",
+      price: "₹650",
+      image: "search/pic (9).jpeg",
+      rating: "4 Star"
+    },
+    {
+      name: "Jaipur Urban Stay",
+      place: "Jaipur",
+      address: "Tonk Road, Jaipur",
+      email: "urbanstay@jaipur.com",
+      price: "₹700",
+      image: "search/pic (10).jpg",
+      rating: "4 Star"
+    },
+    {
+      name: "Jaipur Palace Retreat",
+      place: "Jaipur",
+      address: "Hawa Mahal Road, Jaipur",
+      email: "palaceretreat@jaipur.com",
+      price: "₹1000",
+      image: "search/pic (10).jpeg",
+      rating: "5 Star"
+    },
+    {
+      name: "Jaipur Sunrise Hotel",
+      place: "Jaipur",
+      address: "JLN Marg, Jaipur",
+      email: "sunrise@jaipur.com",
+      price: "₹600",
+      image: "search/pic (11).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Jaipur Residency",
+      place: "Jaipur",
+      address: "Malviya Nagar, Jaipur",
+      email: "residency@jaipur.com",
+      price: "₹500",
+      image: "search/pic (11).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Snow Peak Inn",
+      place: "Manali",
+      address: "Mall Road, Manali",
+      email: "manali@snow.com",
+      price: "₹500",
+      image: "search/pic (12).jpg",
+      rating: "2 Star"
+    },
+    {
+  name: "Snow Peak Inn",
+  place: "Manali",
+  address: "Mall Road, Manali",
+  email: "manali@snow.com",
+  price: "₹500",
+  image: "search/pic (12).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Manali Hill Retreat",
+  place: "Manali",
+  address: "Old Manali",
+  email: "hillretreat@manali.com",
+  price: "₹450",
+  image: "search/pic (13).jpg",
+  rating: "1 Star"
+},
+{
+  name: "Manali River View",
+  place: "Manali",
+  address: "Beas River, Manali",
+  email: "riverview@manali.com",
+  price: "₹600",
+  image: "search/pic (13).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Manali Mountain Lodge",
+  place: "Manali",
+  address: "Solang Valley, Manali",
+  email: "mountainlodge@manali.com",
+  price: "₹700",
+  image: "search/pic (14).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Manali Comfort Stay",
+  place: "Manali",
+  address: "Vashisht, Manali",
+  email: "comfort@manali.com",
+  price: "₹550",
+  image: "search/pic (14).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Manali Snow Resort",
+  place: "Manali",
+  address: "Hadimba Road, Manali",
+  email: "snowresort@manali.com",
+  price: "₹1000",
+  image: "search/pic (15).jpg",
+  rating: "5 Star"
+},
+{
+  name: "Manali Green Valley",
+  place: "Manali",
+  address: "Naggar Road, Manali",
+  email: "greenvalley@manali.com",
+  price: "₹480",
+  image: "search/pic (15).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Manali Nature Stay",
+  place: "Manali",
+  address: "Log Huts Area, Manali",
+  email: "naturestay@manali.com",
+  price: "₹850",
+  image: "search/pic (16).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Manali Urban View",
+  place: "Manali",
+  address: "New Manali",
+  email: "urban@manali.com",
+  price: "₹500",
+  image: "search/pic (16).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Manali Royal Inn",
+  place: "Manali",
+  address: "Aleo, Manali",
+  email: "royalinn@manali.com",
+  price: "₹900",
+  image: "search/pic (17).jpg",
+  rating: "5 Star"
+},
+    {
+      name: "Lake View Stay",
+      place: "Udaipur",
+      address: "Pichola Lake, Udaipur",
+      email: "udaipur@lakeview.com",
+      price: "₹1000",
+      image: "search/pic (17).jpeg",
+      rating: "5 Star"
+    },
+    {
+  name: "Lake View Stay",
+  place: "Udaipur",
+  address: "Pichola Lake, Udaipur",
+  email: "udaipur@lakeview.com",
+  price: "₹1000",
+  image: "search/pic (18).jpg",
+  rating: "5 Star"
+},
+{
+  name: "Udaipur Budget Stay",
+  place: "Udaipur",
+  address: "Hathipole, Udaipur",
+  email: "budget@udaipur.com",
+  price: "₹450",
+  image: "search/pic (18).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Udaipur Palace View",
+  place: "Udaipur",
+  address: "City Palace Road, Udaipur",
+  email: "palaceview@udaipur.com",
+  price: "₹600",
+  image: "search/pic (19).jpg",
+  rating: "3 Star"
+},
+{
+  name: "Udaipur Hillside Inn",
+  place: "Udaipur",
+  address: "Fatehsagar Lake, Udaipur",
+  email: "hillside@udaipur.com",
+  price: "₹700",
+  image: "search/pic (19).jpeg",
+  rating: "4 Star"
+},
+{
+  name: "Udaipur Royal Stay",
+  place: "Udaipur",
+  address: "Gulab Bagh Road, Udaipur",
+  email: "royalstay@udaipur.com",
+  price: "₹900",
+  image: "search/pic (20).jpg",
+  rating: "5 Star"
+},
+{
+  name: "Udaipur Comfort Inn",
+  place: "Udaipur",
+  address: "Saheliyon Ki Bari",
+  email: "comfort@udaipur.com",
+  price: "₹500",
+  image: "search/pic (20).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Udaipur Green View",
+  place: "Udaipur",
+  address: "Shobhagpura, Udaipur",
+  email: "greenview@udaipur.com",
+  price: "₹550",
+  image: "search/pic (21).jpg",
+  rating: "3 Star"
+},
+{
+  name: "Udaipur Tranquil Stay",
+  place: "Udaipur",
+  address: "Ambamata, Udaipur",
+  email: "tranquil@udaipur.com",
+  price: "₹480",
+  image: "search/pic (21).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Udaipur Residency",
+  place: "Udaipur",
+  address: "Ashok Nagar, Udaipur",
+  email: "residency@udaipur.com",
+  price: "₹850",
+  image: "search/pic (22).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Udaipur Heritage Hotel",
+  place: "Udaipur",
+  address: "Chandpole, Udaipur",
+  email: "heritage@udaipur.com",
+  price: "₹500",
+  image: "search/pic (22).jpeg",
+  rating: "3 Star"
+},
+    {
+      name: "Shimla Valley Hotel",
+      place: "Shimla",
+      address: "Mall Road, Shimla",
+      email: "shimla@valley.com",
+      price: "₹480",
+      image: "search/pic (23).jpg",
+      rating: "2 Star"
+    },
+    {
+      name: "Marine Grand",
+      place: "Mumbai",
+      address: "Marine Drive, Mumbai",
+      email: "mumbai@marine.com",
+      price: "₹750",
+      image: "search/pic (23).jpeg",
+      rating: "4 Star"
+    },
+    {
+  name: "Marine Grand",
+  place: "Mumbai",
+  address: "Marine Drive, Mumbai",
+  email: "mumbai@marine.com",
+  price: "₹750",
+  image: "search/pic (24).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Mumbai Sea View",
+  place: "Mumbai",
+  address: "Juhu Beach, Mumbai",
+  email: "seaview@mumbai.com",
+  price: "₹1000",
+  image: "search/pic (24).jpeg",
+  rating: "5 Star"
+},
+{
+  name: "Mumbai Comfort Inn",
+  place: "Mumbai",
+  address: "Bandra West, Mumbai",
+  email: "comfort@mumbai.com",
+  price: "₹500",
+  image: "search/pic (25).jpg",
+  rating: "3 Star"
+},
+{
+  name: "Mumbai Budget Stay",
+  place: "Mumbai",
+  address: "Dadar, Mumbai",
+  email: "budget@mumbai.com",
+  price: "₹450",
+  image: "search/pic (25).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Mumbai Grand Palace",
+  place: "Mumbai",
+  address: "Colaba, Mumbai",
+  email: "palace@mumbai.com",
+  price: "₹850",
+  image: "search/pic (26).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Mumbai Urban Stay",
+  place: "Mumbai",
+  address: "Andheri East, Mumbai",
+  email: "urban@mumbai.com",
+  price: "₹600",
+  image: "search/pic (26).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Mumbai Royal Residency",
+  place: "Mumbai",
+  address: "Powai, Mumbai",
+  email: "residency@mumbai.com",
+  price: "₹700",
+  image: "search/pic (27).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Mumbai Hill View",
+  place: "Mumbai",
+  address: "Ghatkopar, Mumbai",
+  email: "hillview@mumbai.com",
+  price: "₹480",
+  image: "search/pic (27).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Mumbai Green Villa",
+  place: "Mumbai",
+  address: "Borivali, Mumbai",
+  email: "greenvilla@mumbai.com",
+  price: "₹550",
+  image: "search/pic (28).jpg",
+  rating: "3 Star"
+},
+{
+  name: "Mumbai Tranquil Resort",
+  place: "Mumbai",
+  address: "Malad, Mumbai",
+  email: "tranquil@mumbai.com",
+  price: "₹900",
+  image: "search/pic (28).jpeg",
+  rating: "5 Star"
+},
+    {
+  name: "Shimla Valley Hotel",
+  place: "Shimla",
+  address: "Mall Road, Shimla",
+  email: "shimla@valley.com",
+  price: "₹480",
+  image: "search/pic (29).jpg",
+  rating: "2 Star"
+},
+{
+  name: "Shimla Snow Retreat",
+  place: "Shimla",
+  address: "Kufri Road, Shimla",
+  email: "snowretreat@shimla.com",
+  price: "₹450",
+  image: "search/pic (29).jpeg",
+  rating: "1 Star"
+},
+{
+  name: "Shimla Heritage Inn",
+  place: "Shimla",
+  address: "Jakhoo Hill, Shimla",
+  email: "heritageinn@shimla.com",
+  price: "₹550",
+  image: "search/pic (30).jpg",
+  rating: "3 Star"
+},
+{
+  name: "Shimla Green Valley",
+  place: "Shimla",
+  address: "Summer Hill, Shimla",
+  email: "greenvalley@shimla.com",
+  price: "₹600",
+  image: "search/pic (30).jpeg",
+  rating: "3 Star"
+},
+{
+  name: "Shimla Comfort Stay",
+  place: "Shimla",
+  address: "Boileauganj, Shimla",
+  email: "comfort@shimla.com",
+  price: "₹700",
+  image: "search/pic (31).jpg",
+  rating: "4 Star"
+},
+{
+  name: "Shimla Urban View",
+  place: "Shimla",
+  address: "Chotta Shimla",
+  email: "urbanview@shimla.com",
+  price: "₹900",
+  image: "search/pic (31).jpeg",
+  rating: "5 Star"
+},
+{
+  name: "Shimla Sunrise Hotel",
+  place: "Shimla",
+  address: "Sanjauli, Shimla",
+  email: "sunrise@shimla.com",
+  price: "₹1000",
+  image: "search/pic (32).jpeg",
+  rating: "5 Star"
+},
+{
+  name: "Shimla Budget Inn",
+  place: "Shimla",
+  address: "Lakkar Bazaar, Shimla",
+  email: "budget@shimla.com",
+  price: "₹500",
+  image: "search/pic (33).jpeg",
+  rating: "2 Star"
+},
+{
+  name: "Shimla Residency",
+  place: "Shimla",
+  address: "The Ridge, Shimla",
+  email: "residency@shimla.com",
+  price: "₹850",
+  image: "search/pic (34).jpeg",
+  rating: "4 Star"
+},
+{
+  name: "Shimla Mountain View",
+  place: "Shimla",
+  address: "Bharari Road, Shimla",
+  email: "mountain@shimla.com",
+  price: "₹600",
+  image: "search/pic (35).jpeg",
+  rating: "3 Star"
+},
+    {
+      name: "Hill Escape",
+      place: "Lonavala",
+      address: "Tiger Point, Lonavala",
+      email: "lonavala@hill.com",
+      price: "₹500",
+      image: "search/pic (36).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Royal Mysore",
+      place: "Mysore",
+      address: "Palace Road, Mysore",
+      email: "mysore@royal.com",
+      price: "₹650",
+      image: "search/pic (37).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Green Hills",
+      place: "Kodaikanal",
+      address: "Coaker's Walk, Kodaikanal",
+      email: "kodaikanal@green.com",
+      price: "₹490",
+      image: "search/pic (38).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Hill Escape",
+      place: "Lonavala",
+      address: "Tiger Point, Lonavala",
+      email: "lonavala@hill.com",
+      price: "₹500",
+      image: "search/pic (39).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Lonavala Cliff Inn",
+      place: "Lonavala",
+      address: "Lion's Point, Lonavala",
+      email: "cliff@lonavala.com",
+      price: "₹600",
+      image: "search/pic (40).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Lonavala Budget Stay",
+      place: "Lonavala",
+      address: "Old Highway, Lonavala",
+      email: "budget@lonavala.com",
+      price: "₹480",
+      image: "search/pic (41).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Lonavala Hillside Hotel",
+      place: "Lonavala",
+      address: "Bhushi Dam, Lonavala",
+      email: "hillside@lonavala.com",
+      price: "₹700",
+      image: "search/pic (42).jpeg",
+      rating: "4 Star"
+    },
+    {
+      name: "Lonavala Lake View",
+      place: "Lonavala",
+      address: "Pavana Lake, Lonavala",
+      email: "lakeview@lonavala.com",
+      price: "₹900",
+      image: "search/pic (43).jpeg",
+      rating: "5 Star"
+    },
+    {
+      name: "Royal Mysore",
+      place: "Mysore",
+      address: "Palace Road, Mysore",
+      email: "mysore@royal.com",
+      price: "₹650",
+      image: "search/pic (44).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Mysore Garden Stay",
+      place: "Mysore",
+      address: "Brindavan Gardens, Mysore",
+      email: "garden@mysore.com",
+      price: "₹700",
+      image: "search/pic (45).jpeg",
+      rating: "4 Star"
+    },
+    {
+      name: "Green Hills",
+      place: "Kodaikanal",
+      address: "Coaker's Walk, Kodaikanal",
+      email: "kodaikanal@green.com",
+      price: "₹490",
+      image: "search/pic (46).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Kodaikanal Lake View",
+      place: "Kodaikanal",
+      address: "Kodaikanal Lake",
+      email: "lake@kodaikanal.com",
+      price: "₹600",
+      image: "search/pic (47).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Mist Villa",
+      place: "Ooty",
+      address: "Rose Garden Road, Ooty",
+      email: "ooty@mistvilla.com",
+      price: "₹900",
+      image: "search/pic (48).jpeg",
+      rating: "4 Star"
+    },
+    {
+      name: "Hill Escape",
+      place: "Lonavala",
+      address: "Tiger Point, Lonavala",
+      email: "lonavala@hill.com",
+      price: "₹500",
+      image: "search/pic (49).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Lonavala Sunset Inn",
+      place: "Lonavala",
+      address: "Sunset Point, Lonavala",
+      email: "sunset@lonavala.com",
+      price: "₹600",
+      image: "search/pic (50).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Lonavala Comfort Stay",
+      place: "Lonavala",
+      address: "Valvan, Lonavala",
+      email: "comfort@lonavala.com",
+      price: "₹480",
+      image: "search/pic (51).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Lonavala Premium Hotel",
+      place: "Lonavala",
+      address: "Ryewood Park, Lonavala",
+      email: "premium@lonavala.com",
+      price: "₹750",
+      image: "search/pic (52).jpeg",
+      rating: "4 Star"
+    },
+    {
+      name: "Lonavala Serenity Inn",
+      place: "Lonavala",
+      address: "Karla Caves Road",
+      email: "serenity@lonavala.com",
+      price: "₹980",
+      image: "search/pic (53).jpeg",
+      rating: "5 Star"
+    },
+    {
+      name: "Mysore Palace View",
+      place: "Mysore",
+      address: "Chamundi Hill Rd, Mysore",
+      email: "palaceview@mysore.com",
+      price: "₹550",
+      image: "search/pic (54).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Mysore Tranquil Stay",
+      place: "Mysore",
+      address: "Nazarbad, Mysore",
+      email: "tranquil@mysore.com",
+      price: "₹480",
+      image: "search/pic (34).jpeg",
+      rating: "2 Star"
+    },
+    {
+      name: "Kodaikanal Woods Resort",
+      place: "Kodaikanal",
+      address: "Bryant Park Road",
+      email: "woods@kodaikanal.com",
+      price: "₹700",
+      image: "search/pic (44).jpeg",
+      rating: "3 Star"
+    },
+    {
+      name: "Kodaikanal Hill Stay",
+      place: "Kodaikanal",
+      address: "Observatory Rd",
+      email: "hillstay@kodaikanal.com",
+      price: "₹900",
+      image: "search/pic (20).jpg",
+      rating: "4 Star"
+    },
+    {
+      name: "Ooty Mountain Breeze",
+      place: "Ooty",
+      address: "Fern Hill, Ooty",
+      email: "mountain@ooty.com",
+      price: "₹650",
+      image: "search/pic (2).jpg",
+      rating: "3 Star"
+    },
+    {
+      name: "Ooty Garden Stay",
+      place: "Ooty",
+      address: "Botanical Garden Road",
+      email: "garden@ooty.com",
+      price: "₹580",
+      image: "search/pic (5).jpg",
+      rating: "2 Star"
+    },
+    {
+      name: "Ooty Lake Side Hotel",
+      place: "Ooty",
+      address: "Ooty Lake, Ooty",
+      email: "lakeside@ooty.com",
+      price: "₹1000",
+      image: "search/pic (31).jpg",
+      rating: "5 Star"
+    },
+    {
+      name: "Mist Villa",
+      place: "Ooty",
+      address: "Rose Garden Road, Ooty",
+      email: "ooty@mistvilla.com",
+      price: "₹900",
+      image: "search/pic (17).jpg",
+      rating: "4 Star"
+    }
+  ];
+
+  const container = document.getElementById("cardContainer");
+  const detailPanel = document.getElementById("detailsPanel");
+  const detailImg = document.getElementById("detailImg");
+  const detailTitle = document.getElementById("detailTitle");
+  const detailAddress = document.getElementById("detailAddress");
+  const detailEmail = document.getElementById("detailEmail");
+  const detailPrice = document.getElementById("detailPrice");
+
+  function renderCards(filterPlace = null) {
+    container.innerHTML = "";
+
+    let filtered = hotels;
+    if (filterPlace) filtered = filtered.filter(h => h.place === filterPlace);
+
+    const under500 = document.querySelector('input[value="under500"]').checked;
+    const over500 = document.querySelector('input[value="over500"]').checked;
+
+    filtered = filtered.filter(hotel => {
+      const priceNum = parseInt(hotel.price.replace('₹', ''));
+      if (under500 && !over500) return priceNum <= 500;
+      if (!under500 && over500) return priceNum > 500;
+      return true; // If both or none selected, show all
+    });
+
+    const selectedRating = document.querySelector('select[name="rating"]').value;
+    if (selectedRating !== 'All') {
+      filtered = filtered.filter(h => h.rating === selectedRating);
+    }
+
+    filtered.slice(0, 10).forEach(hotel => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <img src="${hotel.image}" alt="${hotel.name}" />
+        <h4>${hotel.name}</h4>
+        <p>${hotel.address}</p>
+        <p>${hotel.email}</p>
+        <p><strong>${hotel.price}</strong></p>
+      `;
+      div.onclick = () => showDetails(hotel);
+      container.appendChild(div);
+    });
+  }
+
+  function showDetails(hotel) {
+    detailImg.src = hotel.image;
+    detailTitle.innerText = hotel.name;
+    detailAddress.innerText = hotel.address;
+    detailEmail.innerText = hotel.email;
+    detailPrice.innerText = hotel.price;
+    detailPanel.classList.add("active");
+  }
+
+  document.querySelectorAll(".places-row button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const place = btn.textContent;
+      renderCards(place);
+    });
+  });
+
+  document.querySelectorAll('.filters input, .filters select').forEach(el => {
+    el.addEventListener('change', () => renderCards());
+  });
+
+  document.addEventListener("click", function (e) {
+    if (detailPanel.classList.contains("active") && !detailPanel.contains(e.target) && !e.target.closest(".card")) {
+      detailPanel.classList.remove("active");
+    }
+  });
+
+  renderCards();
+</script>
+
+<section class="new-section">
+  <img class="new-center-img" src="search/beds.png" alt="Animated Center Image">
+
+  <div class="new-left">
+    <h3>Our Quality & Services</h3>
+    <ul>
+      <li>Premium Hospitality</li>
+      <li>Verified Accommodations</li>
+      <li>Personalized Experiences</li>
+      <li>24x7 Support</li>
+      <li>Instant Booking</li>
+    </ul>
+  </div>
+
+  <div class="new-right">
+    <h3>Top Places & Filters</h3>
+    <ul>
+      <li>Goa</li>
+      <li>Manali</li>
+      <li>Udaipur</li>
+      <li>Shimla</li>
+      <li>Jaipur</li>
+      <li>Price: Under ₹500 / ₹500+</li>
+      <li>Stars: 1 ★ to 5 ★</li>
+      <li>Guests: Solo to Family</li>
+      <li>Features: Wi-Fi, AC, Meals</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+   window.addEventListener('scroll', () => {
+    const section = document.querySelector('.new-section');
+    const image = document.querySelector('.new-center-img');
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      section.classList.add('animate');
+    } else {
+      section.classList.remove('animate');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<footer class="footer">
+  <div class="footer-top">
+    
+    <!-- Left Section -->
+    <div class="footer-col company-info">
+      <div class="logo-box">
+        <img src="jinarth.png" alt="Company Logo">
+        <div class="company-text">
+          <h3>Jinarth Infotech</h3>
+          <p class="tagline">Empowering Digital Solutions</p>
+        </div>
+      </div>
+      <p class="intro">
+        Jinarth Infotech is a modern tech company delivering smart digital experiences. <br>
+        We specialize in innovative software solutions tailored for your success.
+      </p>
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-col quick-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#trust">Trust & Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-col contact-info">
+      <h4>Contact Us</h4>
+      <p>Anand, Gujarat 388001</p>
+      <p>+91 12345 67890</p>
+      <p>info@jinarthinfotech.com</p>
+      <p><a href="http://www.jinarthinfotech.com" target="_blank">www.jinarthinfotech.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Info Row -->
+  <div class="footer-bottom">
+    <p class="left">@2025 Jinarth Infotech. All rights reserved.</p>
+    <p class="center">Developed by Jinarth Infotech</p>
+    <p class="right">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Site Map</a>
+    </p>
+  </div>
+
+  <!-- Final Big Brand Text -->
+  <div class="footer-brand">
+    <h1>JINARTH</h1>
+  </div>
+</footer>
+
+</body>
+  <script src="script.js"></script>
+</html>
