@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+     <link rel="stylesheet" href="contactus.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+     <nav class="navbar" id="navbar" >
+    <div class="logo-box">Room</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="register-btn" id="registerBtn">
+      <button>Emergency</button>
+    </div>
+    <div class="menu-icon" onclick="openMenu()">
+  &#9776;
+</div>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Trust & Certificates</a></li>
+    </ul>
+  </div>
+</div>
+  </nav>
+
+<section class="contact-section">
+  <h1 class="contact-title">CONTACT</h1>
+  <p class="contact-subtitle">We Love to hear from you</p>
+</section>
+
+</section>
+
+ <div class="logo-line move-left">
+    <div class="logo-track">
+      <!-- 10 logos duplicated for smooth loop -->
+      <img src="icon (1).png" alt="">
+      <img src="icon (2).png" alt="">
+      <img src="icon (3).png" alt="">
+      <img src="icon (4).png" alt="">
+      <img src="icon (5).png" alt="">
+      <img src="icon (6).png" alt="">
+      <img src="icon (7).png" alt="">
+      <img src="icon (8).png" alt="">
+      <img src="icon (9).png" alt="">
+      <img src="icon (10).png" alt=""> 
+
+      <!-- Duplicate -->
+      <img src="icon (1).png" alt="">
+      <img src="icon (2).png" alt="">
+      <img src="icon (3).png" alt="">
+      <img src="icon (4).png" alt="">
+      <img src="icon (5).png" alt="">
+      <img src="icon (6).png" alt="">
+      <img src="icon (7).png" alt="">
+      <img src="icon (8).png" alt="">
+      <img src="icon (9).png" alt="">
+      <img src="icon (10).png" alt="">
+    </div>
+  </div>
+
+</section>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({
+      publicKey: "PcECLNub9i6f-nDcU", // 🔁 Replace with actual key
+    });
+  })();
+</script>
+
+  <style>
+    .contact-container {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      display: flex;
+      max-width: 1100px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .contact-infot {
+      flex: 1;
+      background: #1e90ff;
+      color: white;
+      padding: 40px;
+    }
+
+    .contact-infot h3 {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .contact-infot p {
+      margin-bottom: 25px;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 10px;
+    }
+
+    .contact-form {
+      flex: 1;
+      padding: 40px;
+      background-color: #ffffff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f7f9fc;
+      font-size: 16px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #1e90ff;
+      background-color: #fff;
+    }
+
+    .submit-btn {
+      padding: 14px 20px;
+      background-color: #1e90ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #005ecb;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="contact-container">
+  <div class="contact-infot">
+    <h3>Call Us</h3>
+    <p>+888 777 357</p>
+    <h3>Email</h3>
+    <p>mrtanvir0072@gmail.com</p>
+    <h3>Address</h3>
+    <p>Narsanda, Gujarat</p>
+  </div>
+
+  <div class="contact-form">
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <select id="location" name="location" required>
+          <option value="">Select location</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<!-- ✅ EmailJS Script -->
+<script type="text/javascript">
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const location = document.getElementById("location").value;
+
+    if (!name || !email || !location) {
+      alert("❗ Please fill in all fields.");
+      return;
+    }
+
+    const params = {
+      name: name,
+      email: email,
+      location: location
+    };
+
+    emailjs.send("service_aqx7qqr", "template_qo5szkn", params)
+      .then(() => {
+        alert("✅ Your message has been sent to mrtanvir0072@gmail.com");
+        document.getElementById("contact-form").reset();
+      })
+      .catch((error) => {
+        console.error("❌ EmailJS Error:", error);
+        alert("❌ Failed to send email: " + (error?.text || "Unknown error"));
+      });
+  });
+</script>
+
+
+<!-- 🌍 Narsanda Location Map Section -->
+<section class="map-section">
+  <h2 class="map-heading"></h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.7776156603966!2d72.83218277518401!3d22.60826553275598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5b5e1485d5db%3A0x9a75f4ffbe302489!2sNarsanda%2C%20Gujarat%20387015!5e0!3m2!1sen!2sin!4v1720517133543!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    
+    <!-- Left Section -->
+    <div class="footer-col company-info">
+      <div class="logo-box">
+        <img src="jinarth.png" alt="Company Logo">
+        <div class="company-text">
+          <h3>Jinarth Infotech</h3>
+          <p class="tagline">Empowering Digital Solutions</p>
+        </div>
+      </div>
+      <p class="intro">
+        Jinarth Infotech is a modern tech company delivering smart digital experiences. <br>
+        We specialize in innovative software solutions tailored for your success.
+      </p>
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-col quick-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#trust">Trust & Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-col contact-info">
+      <h4>Contact Us</h4>
+      <p>Anand, Gujarat 388001</p>
+      <p>+91 12345 67890</p>
+      <p>info@jinarthinfotech.com</p>
+      <p><a href="http://www.jinarthinfotech.com" target="_blank">www.jinarthinfotech.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Info Row -->
+  <div class="footer-bottom">
+    <p class="left">@2025 Jinarth Infotech. All rights reserved.</p>
+    <p class="center">Developed by Jinarth Infotech</p>
+    <p class="right">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Site Map</a>
+    </p>
+  </div>
+
+  <!-- Final Big Brand Text -->
+  <div class="footer-brand">
+    <h1>JINARTH</h1>
+  </div>
+</footer>
+
+</body>
+</html>
